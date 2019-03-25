@@ -1,0 +1,27 @@
+﻿<Window x:Class="DrawFloor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrawFloor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1080">
+    <Grid Background="NavajoWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Height="30" VerticalAlignment="Top">
+            <Button Content="Save" Click="Button_Click" />
+            <Label>Ширина:</Label>
+            <TextBox Width="50"></TextBox>
+            <Label>Высота:</Label>
+            <TextBox Width="50"></TextBox>
+        </Menu> 
+        <ScrollViewer Grid.Row="1" x:Name="gridForCanvas" Background="White" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+            <Canvas x:Name="canvasMain"  Width="2490" Height="3510">
+
+            </Canvas>
+        </ScrollViewer>
+    </Grid>
+</Window>
